@@ -397,7 +397,7 @@ bool git_attr_fnmatch__match(
 
 		/* for attribute checks or root ignore checks, fail match */
 		if (!(match->flags & GIT_ATTR_FNMATCH_IGNORE) ||
-			path->basename == path->path)
+			path->basename == relpath)
 			return false;
 
 		flags |= FNM_LEADING_DIR;
